@@ -1,0 +1,82 @@
+/* Shared art direction. Original content and block behavior stay intact. */
+:root{--studio-bg:#141515;--studio-surface:#1c1e1d;--studio-text:#efece5;--studio-muted:#a9aaa3;--studio-accent:#df805e;--studio-line:#ffffff24;--ast-global-color-0:#df805e;--ast-global-color-1:#f0aa8f;--ast-global-color-2:#efece5;--ast-global-color-3:#bcbeb7;--ast-global-color-4:#141515;--ast-global-color-5:#1c1e1d;--ast-global-color-6:#30332f;--ast-global-color-7:#efece5;--ast-global-color-8:#141515}
+html{scroll-behavior:smooth;background:var(--studio-bg)}
+body[data-studio-page]{margin:0;background:var(--studio-bg);color:var(--studio-text);font-family:Roboto,Arial,sans-serif;font-size:17px;line-height:1.8;-webkit-font-smoothing:antialiased}
+body[data-studio-page] #page{overflow:clip;background:var(--studio-bg)}
+body[data-studio-page] a{color:inherit;transition:color .2s,background .2s,border-color .2s}
+body[data-studio-page] a:hover{color:var(--studio-accent)}
+body[data-studio-page] :focus-visible{outline:2px solid var(--studio-accent);outline-offset:6px}
+body[data-studio-page] .studio-header{position:relative;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:32px;padding:27px 5vw;border-bottom:1px solid #d8d4cc;background:#f7f5f0!important;color:#171918;color-scheme:light}
+.studio-brand{display:flex;flex-direction:column;gap:9px;text-decoration:none!important;line-height:1}
+.studio-logo{display:block;width:min(300px,34vw);height:auto;object-fit:contain;object-position:left center}
+.studio-nav{display:flex;align-items:center;gap:34px;font-size:14px}
+.studio-nav>a,.studio-games-nav>a{display:block;padding:12px 0;position:relative}
+.studio-header a{color:#1b1d1c!important}
+.studio-header a:hover{color:#a54e32!important}
+.studio-nav [aria-current=page]::after{content:'';position:absolute;left:0;right:0;bottom:4px;height:2px;background:#b9583b}
+.studio-games-nav{position:relative}
+.studio-subnav{display:none;position:absolute;top:100%;left:-22px;min-width:205px;padding:16px 22px;background:#fff!important;border:1px solid #d8d4cc;box-shadow:0 12px 35px #0002}
+.studio-games-nav:hover .studio-subnav,.studio-games-nav:focus-within .studio-subnav{display:block}
+.studio-nav .studio-language{border-left:1px solid #c9c4bb;padding-left:25px;font-size:12px;letter-spacing:1px;color:#a54e32!important}
+body[data-studio-page] #content>.ast-container{max-width:1440px;padding:0 5vw}
+body[data-studio-page] #primary{margin:0;padding:0;width:100%}
+body[data-studio-page] .ast-article-single{background:none;padding:64px 0 90px}
+body[data-studio-page] .entry-header{margin:0 0 55px;padding:0 0 30px;border-bottom:1px solid var(--studio-line)}
+body[data-studio-page] .entry-title{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(42px,5.5vw,78px);letter-spacing:-2px;line-height:1.1;color:var(--studio-text)}
+body[data-studio-page] .entry-content{color:#bcbeb7;font-size:17px;line-height:1.85}
+body[data-studio-page] .entry-content strong{color:var(--studio-text);font-weight:600}
+body[data-studio-page] .entry-content a{color:var(--studio-accent)}
+body[data-studio-page] .entry-content p{margin-bottom:1.7em}
+body[data-studio-page] .entry-content h2,body[data-studio-page] .entry-content h3{color:var(--studio-text);font-family:Georgia,serif;font-weight:400}
+body[data-studio-page] .entry-content .alignwide,body[data-studio-page] .entry-content .alignfull{margin-left:0;margin-right:0;max-width:100%;width:100%}
+body[data-studio-page] .wp-block-columns{gap:clamp(24px,4vw,65px)}
+body[data-studio-page] .wp-block-column{border:0!important;border-radius:0!important}
+body[data-studio-page] .wp-block-image img,body[data-studio-page] .wp-block-media-text__media img{border-radius:2px!important}
+body[data-studio-page] iframe{max-width:100%;border:1px solid var(--studio-line);color-scheme:normal}
+body[data-studio-page] .wp-block-button__link{border:1px solid var(--studio-line);background:transparent;color:var(--studio-text)!important;border-radius:0;padding:15px 25px;font-size:14px}
+body[data-studio-page] .wp-block-button__link:hover{background:var(--studio-accent);color:var(--studio-bg)!important}
+body[data-studio-page] .studio-footer{padding:42px 5vw;display:flex;align-items:center;justify-content:flex-end;gap:30px;border-top:1px solid var(--studio-line);background:var(--studio-bg);text-align:left}
+.footer-meta{display:flex;align-items:center;gap:24px;color:var(--studio-muted);font-size:12px}
+body[data-studio-page=home] #content>.ast-container{max-width:none;padding:0}
+body[data-studio-page=home] .ast-article-single{padding:0}
+body[data-studio-page=home] .entry-header{display:none}
+body[data-studio-page=home] .site-content,body[data-studio-page=home] #content,body[data-studio-page=home] #content>.ast-container,body[data-studio-page=home] .site-main,body[data-studio-page=home] .entry-content{background:var(--studio-bg)!important}
+body[data-studio-page=home] .wp-block-video{margin:0!important;width:100%;background:#000;line-height:0}
+body[data-studio-page=home] .studio-home-trailer{display:block;width:100%;height:auto;aspect-ratio:16/9;max-width:none;border:0;background:#000}
+body[data-studio-page=home] .entry-content>p:empty{display:none}
+body[data-studio-page=home] .entry-content>center{padding:45px 5vw;background:var(--studio-bg)!important;border-top:1px solid var(--studio-line);border-bottom:1px solid var(--studio-line)}
+body[data-studio-page=home] .entry-content>center iframe{display:block;margin:0 auto}
+body[data-studio-page=games] .wp-block-media-text{grid-template-columns:55% auto!important;background:var(--studio-surface);border:1px solid var(--studio-line)}
+body[data-studio-page=games] .wp-block-media-text__media{height:100%;min-height:330px;overflow:hidden}
+body[data-studio-page=games] .wp-block-media-text__media img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+body[data-studio-page=games] .wp-block-media-text:hover img{transform:scale(1.025)}
+body[data-studio-page=games] .wp-block-media-text__content{padding:40px!important}
+body[data-studio-page=games] .wp-block-media-text__content p:first-child{font-family:Georgia,serif;font-size:34px;line-height:1.2;letter-spacing:-1px}
+body[data-studio-page=games] .wp-block-media-text__content p:first-child a{color:var(--studio-text)}
+body[data-studio-page=about] .wp-block-columns{align-items:start}
+body[data-studio-page=about] .wp-block-column:has(img){max-width:280px}
+body[data-studio-page=about] .wp-block-column:has(img) img{filter:saturate(.55);width:100%;aspect-ratio:1;object-fit:cover}
+body[data-studio-page=about] .wp-block-column:has(p){max-width:780px}
+body[data-studio-page=about] .entry-content>.wp-block-paragraph:empty{display:none}
+body[data-studio-page=game] .entry-content>.wp-block-columns>.wp-block-column:first-child{flex-basis:28%!important}
+body[data-studio-page=game] .entry-content>.wp-block-columns>.wp-block-column:last-child{flex-basis:72%!important}
+body[data-studio-page=game] .wp-block-column>p:first-child{font-size:22px;line-height:1.6;color:var(--studio-text)}
+body[data-studio-page=game] .wp-block-gallery{margin-bottom:30px}
+body[data-studio-page=game] .game-info-card{align-self:flex-start;padding:22px;background:#202220;border:1px solid var(--studio-line)!important}
+body[data-studio-page=game] .game-info-card .wp-block-gallery{margin:0 0 22px;padding:0;background:#111}
+body[data-studio-page=game] .game-info-card .wp-block-image{margin:0}
+body[data-studio-page=game] .game-info-card .wp-block-image img{display:block;width:100%;height:auto;border-radius:0!important}
+body[data-studio-page=game] .game-info-card>p{margin:10px 0 0!important}
+body[data-studio-page=game] .game-action{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;padding:13px 16px;border:1px solid #ffffff2b;color:var(--studio-text)!important;font-size:14px;font-weight:600;line-height:1.35;text-decoration:none!important}
+body[data-studio-page=game] .game-action span[aria-hidden]{font-size:19px;font-weight:400;line-height:1;color:var(--studio-accent)}
+body[data-studio-page=game] .game-action:hover{border-color:var(--studio-accent);background:#df805e12;color:#fff!important}
+body[data-studio-page=game] .game-action-external{background:#df805e;color:#171918!important;border-color:#df805e}
+body[data-studio-page=game] .game-action-external span[aria-hidden]{color:#171918}
+body[data-studio-page=game] .game-action-external:hover{background:#efaa8c;color:#171918!important;border-color:#efaa8c}
+body[data-studio-page=press] table,body[data-studio-page=press] td{border-color:var(--studio-line);background:var(--studio-surface)}
+body[data-studio-page=press] td{padding:28px}
+body[data-studio-page=press] .has-text-align-center{padding-top:48px;border-top:1px solid var(--studio-line);margin-top:48px;letter-spacing:3px;font-size:14px}
+body[data-studio-page=press] figcaption{color:var(--studio-muted);font-size:13px}
+body[data-studio-page] #ast-scroll-top{background:var(--studio-accent);color:var(--studio-bg);border-radius:0}
+@media(max-width:780px){body[data-studio-page] .studio-header{padding:23px 6vw;flex-direction:column;align-items:flex-start;gap:15px}.studio-nav{gap:25px;width:100%;font-size:13px;justify-content:space-between}.studio-nav .studio-language{padding-left:18px}.studio-logo{width:min(275px,72vw)}.studio-subnav{left:-12px;min-width:180px;padding:12px}.studio-header .studio-brand{gap:8px}body[data-studio-page] #content>.ast-container{padding:0 6vw}body[data-studio-page] .ast-article-single{padding:40px 0 55px}body[data-studio-page] .entry-header{margin-bottom:32px;padding-bottom:25px}body[data-studio-page] .entry-title{font-size:44px;letter-spacing:-1.5px}body[data-studio-page] .entry-content{font-size:16px}body[data-studio-page=home] #content>.ast-container{padding:0}body[data-studio-page] .studio-footer{align-items:flex-start;flex-direction:column;padding:32px 6vw}.footer-meta{gap:18px;flex-wrap:wrap}body[data-studio-page=games] .wp-block-media-text{display:block!important}body[data-studio-page=games] .wp-block-media-text__media{min-height:0;height:auto}body[data-studio-page=games] .wp-block-media-text__content{padding:25px!important}body[data-studio-page] .wp-block-columns{flex-direction:column}body[data-studio-page=about] .wp-block-column:has(img){max-width:200px}body[data-studio-page=press] td{padding:18px}body[data-studio-page=home] .entry-content>center{padding:24px 4vw}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
